@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>User Information Wizard Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<p>Note: this example might not work properly in Chrome or IE</p>
+<progress id="progress" value="0" max="100"></progress>
+<form action="#" method=POST autocomplete="off">
+	<fieldset>
+		<label>First Name:</label> <input type="text" id="firstName" name="firstName" required autofocus autocomplete="off"/>
+		<label>Last Name:</label> <input type="text" id="lastName" name="lastName" required autocomplete="off"/>
+		<label>Email:</label> <input type="email" id="email" name="email" required autocomplete="off"/>
+		<label>Telephone:</label> <input type="tel" id="telephone" name="telephone" autocomplete="off"	/>
+	</fieldset>
+
+	<fieldset hidden>
+		<label>Birthday:</label> <input type="text" id="birthday" name="birthday" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required autofocus autocomplete="off"/>
+		<!-- attribute type="date" does not accept a pattern for now-->
+		<label>Current Country:</label> <input type="text" id="country" name="country" required autocomplete="off"/>
+		<label>Current City:</label> <input type="text" id="city" name="city" required autocomplete="off"/>
+	</fieldset>
+
+	<fieldset hidden>
+		<label>Password:</label> <input type="password" id="password" name="password" required autofocus autocomplete="off"/>
+		<label>Of course you read our Terms and Conditions:</label><input id="checkit" type="checkbox" required />
+		<div id="result"></div>
+	</fieldset>
+	<button id="toStep2" disabled>Next Step</button>
+	<button id="toStep3" hidden disabled>Next Step</button>
+	<span id="submit" hidden style="cursor:pointer;">View Data</span>
+	<div hidden id="yourData">
+	
+	</div>
+	<input id="finalSubmit" type="submit" />
+</form>
+	
+<script type="text/javascript" src="formDemo.js"></script>
+</body>
+</html>

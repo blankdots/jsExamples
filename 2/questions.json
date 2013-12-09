@@ -1,0 +1,12 @@
+{
+	"questions": [
+	{
+		"Q": "What is Javascript?", 
+		"A": "Javascript is a dynamic, function based scripting language."
+	},
+	{
+		"Q": "What is HTML?", 
+		"A": "HTML is Hypertext Markup language for displaying pages on the web."
+	}
+	]	
+}
