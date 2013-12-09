@@ -10,7 +10,7 @@ function User (theName,theEmail,theAge) {
 	this.telephone = 0;
 }
 
-//
+//User and associated functions
 User.prototype = {
 	constructor: User,
 	updateName: function (newName){
@@ -74,16 +74,19 @@ var submit		= document.getElementById('submit');
 var finalSubmit	= document.getElementById('finalSubmit');
 var valuesGroup = document.getElementsByTagName('fieldset');
 var checkit		= document.getElementById('checkit');
+
+//verify e-mail via regexp
 var emailRegexp = new RegExp ("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$");
 
 toStep2.setAttribute('disabled', true);
 toStep3.setAttribute('disabled', true);
 finalSubmit.setAttribute('disabled', true);
 
+//Note: most surely there is a better way to this for now this is the right one
+
 function updateProgress (){
 	progress.value += 30;
 }
-
 
 function updateWizardStep1() {
 
@@ -118,6 +121,7 @@ function updateWizardStep3() {
 	updateProgress();
 	}
 }
+
 function print (){
 	var printPlace = document.getElementById('yourData');
 	printPlace.removeAttribute('hidden');
@@ -128,10 +132,7 @@ function print (){
 	}
 	finalSubmit.removeAttribute('disabled');
 }
-
-//adding "onChange" event listeners to elements in order to get User information
-//Note: most surely there is a better way to this for now this is the right one
-
+// we need the full name of the user: firstName + lastName
 lastName.addEventListener('change', function () {getFullName();});
 
 function getFullName () {
@@ -145,6 +146,7 @@ function getFullName () {
 	}
 }
 
+//adding "onChange" event listeners to elements in order to get User information
 email.addEventListener('change', function () { 
 	firstUser.updateEmail(email.value);
 	updateWizardStep1();
