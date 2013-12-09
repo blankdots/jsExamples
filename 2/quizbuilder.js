@@ -4,6 +4,7 @@ var info = JSON.parse(jsonFile);
 var updateQuestions = document.getElementById('questions');
 var updateAnswers = document.getElementById('answers');
 var nextButton = document.getElementById('next');
+var showButton = document.getElementById('show');
 var counter = 0;
 
 function dataHandler (info, count) {
@@ -11,7 +12,7 @@ var question = '';
 var answer = '';
 
 if (count <= info.length) {
-	for (key in info[count]) {
+	for (var key in info[count]) {
 		if (info[count].hasOwnProperty(key)){
 			if (key === "Q") {
 				question += '<p>' + '<span> Question is: </span>' + info[count][key] + '</p>';
@@ -25,10 +26,26 @@ if (count <= info.length) {
 	}
 }
 }
-dataHandler(info, counter);
+function loaded () {
+	dataHandler(info, counter);
+	updateAnswers.style.display="none";
+	counter ++;
+}
 
 nextButton.addEventListener('click', function () {
-	counter < info.length-1 ? counter ++ : counter=0; //otherwise the counter will just keep on going
 	dataHandler(info,counter);
-})
+	updateAnswers.style.display="none";
+	// counter < info.length-1 ? counter ++ : counter=0; 
+	// otherwise the counter will just keep on going
+	if (counter < info.length-1)
+		counter ++;
+	else
+		counter=0;
 
+});
+
+showButton.addEventListener('click', function () {
+	updateAnswers.style.display="block";
+});
+
+loaded();
