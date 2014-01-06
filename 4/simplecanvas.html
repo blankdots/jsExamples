@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Canvas Example</title>
+	<style type="text/css">
+	canvas {background:#ccc; margin:20px;}
+	</style>
+</head>
+<body>
+<canvas id="canvas" width="300" height="300"></canvas>
+<script type="text/javascript">
+
+// read reference http://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html
+
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+
+drawEqTriangle(ctx, 100, canvas.width/2, canvas.height/2);
+
+
+function drawEqTriangle(ctx, side, cx, cy){
+    
+    var h = side * (Math.sqrt(3)/2);
+        
+    ctx.strokeStyle = "#ff0000";
+    ctx.lineWidth = 3;
+    
+    ctx.save();
+    ctx.translate(cx, cy);
+    //ctx.rotate(Math.PI/4); //rotate 45degrees
+    
+    ctx.beginPath();
+        
+        ctx.moveTo(0, -h / 2);
+        ctx.lineTo( -side / 2, h / 2);
+        ctx.lineTo(side / 2, h / 2);
+        ctx.lineTo(0, -h / 2);
+        
+        ctx.stroke();
+        ctx.fill(); 
+        
+    ctx.closePath();
+    ctx.save();
+}
+
+</script>
+</body>
+</html>
