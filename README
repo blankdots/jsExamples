@@ -21,3 +21,8 @@ HTML5 + jQuery + CSS3 card quiz questions example
 4. Simple Canvas example
 HTML5 Canvas Example with a triangle (possibility to rotate it)
 ===================================
+5. Mashup
+Simple Mashup between openStreetMap + forecast.io + freegeoip.net
+Required are Jquery and leafletjs libraries along with API keys for both of them.
+The example will not work without the API keys (see source code where to include them).
+===================================
