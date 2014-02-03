@@ -1,13 +1,13 @@
 $( document ).ready(function() {
-	var counter = 0;
-	var arrayLength = 0;
+	var   counter = 0
+		, arrayLength = 0;
 	function loadQuestions (count) {
 	$.getJSON( "questions.json", function( data ) {
 		// console.log(data);
 	})
 	.done(function(data){
-		var question = '';
-		var answer = '';
+		var   question = ''
+			, answer = '';
 		$.each( data, function( key, val ) {
 			if (key === counter) {	
 			question += '<h3 class="cardTitle">Question</h3>' + '<p>' + val.Q + '</p>';

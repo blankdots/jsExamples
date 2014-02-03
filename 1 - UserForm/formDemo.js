@@ -59,21 +59,21 @@ User.prototype = {
 var firstUser = new User();
 
 //let us handle the form inputs
-var firstName	= document.getElementById('firstName');
-var lastName	= document.getElementById('lastName');
-var email 		= document.getElementById('email');
-var birthday	= document.getElementById('birthday');
-var country 	= document.getElementById('country');
-var city 		= document.getElementById('city');
-var password 	= document.getElementById('password');
-var telephone 	= document.getElementById('telephone');
-var progress	= document.getElementById('progress');
-var toStep2 	= document.getElementById('toStep2');
-var toStep3 	= document.getElementById('toStep3');
-var submit		= document.getElementById('submit');
-var finalSubmit	= document.getElementById('finalSubmit');
-var valuesGroup = document.getElementsByTagName('fieldset');
-var checkit		= document.getElementById('checkit');
+var   firstName = document.getElementById('firstName')
+	, lastName = document.getElementById('lastName')
+	, email = document.getElementById('email')
+	, birthday = document.getElementById('birthday')
+	, country = document.getElementById('country')
+	, city = document.getElementById('city')
+	, password = document.getElementById('password')
+	, telephone = document.getElementById('telephone')
+	, progress = document.getElementById('progress')
+	, toStep2 = document.getElementById('toStep2')
+	, toStep3 = document.getElementById('toStep3')
+	, submit = document.getElementById('submit')
+	, finalSubmit	= document.getElementById('finalSubmit')
+	, valuesGroup = document.getElementsByTagName('fieldset')
+	, checkit	= document.getElementById('checkit');
 
 //verify e-mail via regexp
 var emailRegexp = new RegExp ("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$");

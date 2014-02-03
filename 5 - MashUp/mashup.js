@@ -1,9 +1,9 @@
 jQuery(document).ready(function (){
 
 function openStreetMap(lat, longi){
-var map = L.map('map').setView([lat, longi], 15);
-var popup = L.popup();
-var apiKey = ''; //your API key
+var map = L.map('map').setView([lat, longi], 15)
+  , popup = L.popup()
+  , apiKey = ''; //your API key
 
 //add your API-key
   L.tileLayer('http://{s}.tile.cloudmade.com/'+apiKey+'/997/256/{z}/{x}/{y}.png', {
@@ -16,14 +16,14 @@ var apiKey = ''; //your API key
 }
 
 function forecast(lat, longi){
-var apiKey = ''; //your API key
-var url = 'https://api.forecast.io/forecast/';
-var data; 
+var apiKey = '' //your API key
+  , url = 'https://api.forecast.io/forecast/'
+  , data; 
 
   jQuery.getJSON(url + apiKey + "/" + lat + "," + longi + "?units=si" + "&"+ "callback=?", function(data) {
     //console.log(data);
-    var humidity = data.currently.humidity*100;
-    var windSpeed = Math.round(data.currently.windSpeed*3.6);
+    var humidity = data.currently.humidity*100
+      , windSpeed = Math.round(data.currently.windSpeed*3.6);
     jQuery('#temperature').html('Temperature: '+data.currently.temperature+' &#8451');
     jQuery('#wind').html('Wind Speed: '+windSpeed+' km/h');
     jQuery('#humidity').html('Humidity: '+humidity+' %');
@@ -42,7 +42,8 @@ var ipGeolocation = function (){
   
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position){
-  var latitude, longitude;       
+  var   latitude
+      , longitude;       
 
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;    
