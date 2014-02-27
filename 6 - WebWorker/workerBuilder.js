@@ -1,6 +1,6 @@
-var allWorkers = new Array();
-var resultArea;
-var counter = 0;
+var   allWorkers = new Array()
+	, resultArea
+	, counter = 0;
 
 var startWorker = function startWorkerFunct() {
 
@@ -14,7 +14,7 @@ var startWorker = function startWorkerFunct() {
 
 		allWorkers.push(aWorker);
 		
-		var data = ++counter ;
+		var data = ++counter;
 		resultArea.value += "Post: worker " + data + " started at: " + new Date().toTimeString() + "\n";
 		aWorker.postMessage({
 			"workerCount" : data,
@@ -51,7 +51,6 @@ var onLoad = function onLoadFunct () {
 
    resultArea  = document.getElementById("resultArea");
 }
-
 
 
 window.addEventListener("load", onLoad, true);
