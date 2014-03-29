@@ -29,3 +29,9 @@ The example will not work without the API keys (see source code where to include
 6. Simple WebWorkers example
 A simple WebWorkers echo example inspired by https://www.video2brain.com/en/courses/html5-power-workshop -- WebWorkers example
 ===================================
+7. Fancy Registration Form
+A Fancy registration form with regex in the HTML5 pattern attribute, which collects data via AJAX + PHP and displays it. FormData API is being used https://developer.mozilla.org/en-US/docs/Web/API/FormData. Note that an encryption to the password must be added.
+===================================
+8. Post-Redirect-Get using PHP
+The form from the previous example but this time only a simple PHP design pattern being implemented: Post/Redirect/Get .
+===================================

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>Form Example</title>
+<link rel="stylesheet" type="text/css" href="formstyle.css">
+</head>
+<body>
+<section>
+<form action="submitform.php" method="post" autocomplete="off" id="formData">
+<h3>Register</h3>
+<div class="formColumn">
+	<div>
+		<label for="firstname">First Name:</label> 
+		<input id="firstname" type="text" name="firstname" placeholder="First Name" autofocus required />
+	</div>
+	<div>
+		<label for="lastname">Last Name:</label> 
+		<input id="lastname" type="text" name="lastname" placeholder="Last Name" required />
+	</div>
+</div>
+<div class="formColumn">
+	<div>
+		<label for="email">Email:</label> 
+		<input id="email" type="email" name="email" placeholder="Email address" required pattern="[a-zA-Z0-9.]+@{1}((info\.uaic)|(infoiasi))\.{1}(ro)"/>
+	</div>
+	<div>
+		<label for="tel">Telephone:</label> 
+		<input id="tel" type="tel" name="tel" placeholder="Telephone Number" pattern="^((0040)|([+]40))\d{9}$"/>
+	</div>
+</div>
+	<label for="website">Website:</label> 
+	<input id="website" type="url" name="website" placeholder="Personal Website"/>
+
+	<label for="password">Password</label>
+	<input id="password" type="password" name="password" required/>
+<div class="formColumn">
+	<div>
+		<label for="age">Age:</label> 
+		<input id="age" type="number" name="age" placeholder="Your Age" min="13" max="100"/>
+	</div>
+	<div>
+		<label for="date">Date Of Birth:</label> 
+		<input id="date" type="date" name="date"/>
+	</div>
+</div>
+<div class="formColumn">
+	<div>	
+		<label for="browser">Favorite Browser</label>
+		<input list="browsers" name="browsers" id="browser"/>
+		<datalist id="browsers">
+		  <option value="Chrome">
+		  <option value="Firefox">
+		  <option value="Internet Explorer">
+		  <option value="Opera">
+		  <option value="Safari">
+		</datalist>
+	</div>
+	<div>
+		<label for="options">Your Options</label>
+		<select id="options">
+		  <optgroup label="Group 1">
+		    <option>Option 1.1</option>
+		  </optgroup> 
+		  <optgroup label="Group 2">
+		    <option>Option 2.1</option>
+		    <option>Option 2.2</option>
+		  </optgroup>
+		  <optgroup label="Group 3" disabled>
+		    <option>Option 3.1</option>
+		    <option>Option 3.2</option>
+		    <option>Option 3.3</option>
+		  </optgroup>
+		</select>
+	</div>
+</div>
+<label for="skill">Your Skills (1-10)</label>
+<input id="skill" type="range" min="1" max="10" value="1">
+
+<fieldset>
+<legend>Which one?</legend>
+	<div id="radioButtons">
+		<input name="radio" value="just pass" class="radioButton" type="radio">
+		<label>Just Glad to Pass</label>
+		<input name="radio" value="easy" class="radioButton" type="radio">      
+		<label>Easy Way</label>
+		<input name="radio" value="hard" class="radioButton" type="radio">
+		<label>Difficult Way</label>	
+	</div>	
+	
+</fieldset>
+
+<label for="textarea">Message:</label>
+<textarea name="textarea" id="textarea" rows="10" cols="30" placeholder="Your message ... "></textarea>
+
+<label for="checkit">I read the grading rules for Web Technologies Course:</label>
+<input id="checkit" type="checkbox" name="checkit" required />
+	
+<button type="submit" name="submit">Send</button>
+<p id="response"></p>
+</form>
+</section>
+</body>
+</html>

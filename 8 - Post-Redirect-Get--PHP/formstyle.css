@@ -1,0 +1,100 @@
+body{
+    background-color:#fff;
+    color:#2c3e50;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:14px;
+}
+section {
+	margin:20px auto 0;
+	width: 40%;
+	background: #ecf0f1;
+	padding: 10px;
+	display: block;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    box-shadow: 0 0 2px 2px #ecf0f1;
+    -webkit-box-shadow: 0 0 2px #ecf0f1;
+    border:solid 1px #bdc3c7;
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+legend ~ div#radioButtons {
+	margin-left: 50px;
+}
+fieldset input, fieldset label {
+	display: block;
+	float: left;
+	clear:left;
+	width: 10px;
+	margin: 0 10px 0 0;
+}
+fieldset label {
+	width: 200px; 
+	clear:none;
+}
+input, textarea, select {
+    margin:3px 0;
+    padding:10px;
+    display:block;
+    border-radius:2px;
+    -webkit-border-radius:5px;
+    border:none;
+    color:#95a5a6;
+    width:95%;
+    border:solid 2px #ecf0f1;
+}
+input:focus, textarea:focus {
+   border-color: #3498db;
+   transition: border-color 1s;
+   -webkit-transition: border-color 1s;
+}
+label, fieldset > legend {
+    font-weight:700;
+    font-size:1em;
+}
+.formColumn > div {
+    width:50%;
+    float:left;
+    margin:0;
+    padding:0;
+}
+.formColumn > div input, .formColumn > div label {
+	width:90%;
+} 
+input#checkit {
+	width: 10%; 
+	display:inline; 
+	margin: 2px 0; 
+	padding: 0;
+}
+	label[for="checkit"] {
+		margin:10px 0;
+	}
+button {
+	display: block; 
+	margin: 10px 0;
+	background: #3498DB;
+	padding: 10px;
+	border:none;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 1em;
+	font-weight: 500;
+	cursor: pointer;
+	text-shadow:none;
+}
+button:hover {
+	background: #5DADE2;
+	text-shadow: 0 0 1px #2c3e50;
+	transition:background 1s, text-shadow 1s;
+	-webkit-transition:background 1s, text-shadow 1s;
+}
+
+@media screen and (max-width: 1185px){
+    section { width: 50%;}
+    .formColumn > div {clear: both; width: 100%;}
+    .formColumn > div input, label, select {width: 95%;}
+}
