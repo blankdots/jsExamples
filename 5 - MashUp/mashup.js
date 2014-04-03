@@ -2,11 +2,10 @@ jQuery(document).ready(function (){
 
 function openStreetMap(lat, longi){
 var map = L.map('map').setView([lat, longi], 15)
-  , popup = L.popup()
-  , apiKey = ''; //your API key
+  , popup = L.popup();
 
 //add your API-key
-  L.tileLayer('http://{s}.tile.cloudmade.com/'+apiKey+'/997/256/{z}/{x}/{y}.png', {
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
   }).addTo(map);
