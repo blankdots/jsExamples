@@ -11,16 +11,16 @@ body {
 }
 
 .container{
-      width: 40%;
-      min-height: 250px;
-      margin:20px auto 5px;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgb(227, 227, 227);
-      -webkit-box-shadow: 0 0px 2px 1px #ccc;
-              box-shadow: 0 0px 2px 1px #ccc;
-      -webkit-perspective: 800px;
-              perspective: 800px;
+  width: 40%;
+  min-height: 250px;
+  margin:20px auto 5px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(227, 227, 227);
+  -webkit-box-shadow: 0 0px 2px 1px #ccc;
+  box-shadow: 0 0px 2px 1px #ccc;
+  -webkit-perspective: 800px;
+  perspective: 800px;
     }
 #controls { width: 40%; overflow: hidden; margin:20px auto 5px;}
 #flashCard {
@@ -28,16 +28,16 @@ body {
   height: 100%;
   position: absolute;
   -webkit-transition: -webkit-transform 0.8s;
-          transition: transform 0.8s;
+  transition: transform 0.8s;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-transform-origin: right center;
-          transform-origin: right center;
+  transform-origin: right center;
 }
 
 #flashCard.flipped {
   -webkit-transform: translateX( -100% ) rotateY( -180deg );
-          transform: translateX( -100% ) rotateY( -180deg );
+  transform: translateX( -100% ) rotateY( -180deg );
 }
 
 #flashCard div{
@@ -50,7 +50,8 @@ body {
   font-size: 1.6em;
   position: absolute;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 
@@ -61,7 +62,7 @@ body {
 #flashCard .back {
   background-color:rgb(245, 245, 245);
   -webkit-transform: rotateY( 180deg );
-          transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
 }
 
 .cardTitle {
