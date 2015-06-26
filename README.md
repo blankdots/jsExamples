@@ -1,6 +1,6 @@
 ## jsExamples - Javascript Examples
 
-A small collection of Javascript examples and experiments
+A small collection of Javascript examples and experiments.
 
 Author: www.blankdots.com
 
